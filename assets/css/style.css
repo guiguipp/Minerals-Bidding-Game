@@ -2,13 +2,18 @@ body {
     background-image: url("http://www.tokkoro.com/picsup/2909511-breaking-bad___movie-wallpapers.jpg");
     color: white;
 }
+/* allowance */
 .allowance {
+    font-size: 100px;
+    color: black;
+    text-align: center;
     background-color: #fafafa;
     height: 200px;
-    width: 200px;
+    width: 300px;
     border-style: solid;
     border-width: 1px; 
 }
+/* rocks */
 .jewel_box {
     margin: 2%;
     background-color: #fafafa;
@@ -20,10 +25,22 @@ body {
     display: inline-block;
     position: relative;
   }
-  .image_thumbnail {
+  .rock_image {
     object-fit: cover;       /* Scale the image so it covers whole area, thus will likely crop */
     object-position: center; /* Center the image within the element */
     width: 100%;
     height: 200px;
     position: absolute;
   }
+  /* purchases */
+.purchases {
+    font-size: 100px;
+    color: black;
+}
+.purchases {
+    background-color: #fafafa;
+    height: 200px;
+    width: 200px;
+    border-style: solid;
+    border-width: 1px; 
+}
