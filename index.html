@@ -8,41 +8,84 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Carrois+Gothic" rel="stylesheet">
 
 </head>
-<body>
+<body style=background-image: url("http://www.tokkoro.com/picsup/2909511-breaking-bad___movie-wallpapers.jpg");>
 <!-- header -->
-<header>
-    <img src="./assets/images/banner.png" alt="Hank's Fascinating Rock Collection">
-</header>
-          <h3>
-                Help Hank complete his collection of <del>rocks</del> <ins>minerals</ins>. 
-          </h3>
-<!-- instructions -->
-<p>
-Hank is bidding on <del>rocks</del> <ins>minerals</ins> to complete his collection. But he cannot go over his budget! <br> 
-Help him get them all without spending more than he can afford, by clicking on a <del>rock</del> <ins>mineral</ins> to purchase as many as he can within the allocated allowance. 
-</p>
-<!-- allowance -->
-<div class="allowance"> $<span class="value"> </span> </div>
+<div class="container">
 
-
-<!-- game data -->
-
-
-<!-- rocks -->
-<div class="rocks">
-
-    <div class="jewel_box"> <img src="./assets/images/mica-schist.jpg" alt="Mica Schist" class="rock_image" id="rock1"> </img></div>
-    <div class="jewel_box"><img src="./assets/images/BlueCorundum.jpg" alt="Blue Corundum" class="rock_image" id="rock2"> </img></div>
-    <div class="jewel_box"><img src="./assets/images/RhodoniteManganeseInosilicate.jpg" alt="Rhodonite Manganese" class="rock_image" id="rock3"> </img></div>
-    <div class="jewel_box"> <img src="./assets/images/small-geode.jpg" alt="Geode" class="rock_image" id="rock4"> </img></div>
-    
+    <header>
+        <img src="./assets/images/banner.png" alt="Hank's Fascinating Rock Collection">
+    </header>
 </div>
-<!-- this round data -->
-<div class="purchases"> $<span class="bids"> </span> </div>
 
+<div class="container">
+    
+    <div class="row instructions">
+        <div class="col-md-12">
+        <h3>
+        Help Hank complete his collection of <del>rocks</del> <ins>minerals</ins>. 
+        </h3>
+    <!-- instructions -->
+        <div class="row">
+            <div class="col-md-2">
+                
+            </div>
+            <div class="col-md-8">
+                <p>Hank is bidding on <del>rocks</del> <ins>minerals</ins> to complete his collection. But he cannot go over his budget! </p> 
+                <p>Help him get them all without spending more than he can afford, by clicking on a <del>rock</del> <ins>mineral</ins> to purchase as many as he can within the allocated allowance.</p> 
+            </div>
+        </div>
+        </div>
+    </div>
 
+    <div class="row budget">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">            
+        <!-- allowance -->
+            <div class="allowance"> $<span class="value"> </span> </div>
+        <!-- game data -->
+        </div>
+        <div class="col-md-4">
+
+            <div class="tally">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row rocks">
+        <div class="col-md-12">
+            <div class="rocks">
+                <div class="jewel_box"> <img src="./assets/images/mica-schist.jpg" alt="Mica Schist" class="rock_image" id="rock1"> </img></div>
+                <div class="jewel_box"><img src="./assets/images/BlueCorundum.jpg" alt="Blue Corundum" class="rock_image" id="rock2"> </img></div>
+                <div class="jewel_box"><img src="./assets/images/RhodoniteManganeseInosilicate.jpg" alt="Rhodonite Manganese" class="rock_image" id="rock3"> </img></div>
+                <div class="jewel_box"> <img src="./assets/images/small-geode.jpg" alt="Geode" class="rock_image" id="rock4"> </img></div>
+            </div>    
+        </div>
+    </div>
+
+<div class="row">
+    <div>
+<!-- room for more content -->
+    </div>
+</div>
+
+        <div class="row">
+        <!-- this round data -->
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <div class="purchases"> $<span class="bids"> </span> 
+                </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+    </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
