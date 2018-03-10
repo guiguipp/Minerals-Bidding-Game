@@ -1,5 +1,6 @@
 body {
     background-image: url("http://www.tokkoro.com/picsup/2909511-breaking-bad___movie-wallpapers.jpg");
+    background-size:cover;
     color: white;
     font-family: 'Carrois Gothic', sans-serif;
 }
@@ -17,8 +18,9 @@ h3 {
     width: 300px;
     border-style: solid;
     border-width: 3px;
+    border-radius: 20px;
     margin: 15px;
-    padding-top: 2px;
+    padding-top: 20px;
 }
 /* game box */
 .tally {
