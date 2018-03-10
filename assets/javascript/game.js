@@ -7,8 +7,8 @@ $(document).ready(function() {
     var purchases=0;
     var gameWon=false;
     var gameOver=false;
-    var wins=0;
-    var losses=0;
+    var wins;
+    var losses;
     
     
     function initializeGame(){
@@ -27,6 +27,8 @@ $(document).ready(function() {
     mineral4 = 1 + Math.floor(Math.random() * 12);
     $( "#rock4" ).val(mineral4)
     $('.value').html(allowance);
+    $('.wins_t').html(wins);
+    $('.losses_t').html(losses);
 }
 initializeGame()
 
@@ -37,24 +39,30 @@ initializeGame()
             $('.bids').html(purchases);
             if (purchases === allowance) {
                 gameWon=true;
-                console.log("game is won: " + gameWon);
-                wins++;
-                console.log("wins counter: " + wins);
+                // wins++;
+                // return wins;
+                // console.log("wins: " + wins)
             }
             else if(purchases > allowance) {
                 gameOver = true;
-                console.log("game is lost: " + gameOver);
-                losses++;
-                console.log("losses counter: " + losses);
+                // losses++;
+                // return losses;
+                // console.log("losses: " + losses)
             }
         }
         if (purchases === allowance) {
             initializeGame();
-            console.log("attempt at resetting if won")
+            $('#result').html('You successfully bid on the minerals!');
+            wins++;
+                return wins;
+                console.log("wins: " + wins)
         }
         else if (purchases > allowance) {
             initializeGame();
-            console.log("attempt at resetting if lost")
+            losses++;
+            return losses;
+            console.log("losses: " + losses)
+            $('#result').html('You spent too much money on those darn rocks :( ');
         }
         });
   
