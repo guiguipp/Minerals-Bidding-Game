@@ -5,10 +5,10 @@ $(document).ready(function() {
     var mineral3;
     var mineral4;
     var purchases=0;
-    var gameWon=false;
-    var gameOver=false;
-    var wins;
-    var losses;
+    var gameWon;
+    var gameOver;
+    var wins=0;
+    var losses=0;
     
     
     function initializeGame(){
@@ -18,6 +18,7 @@ $(document).ready(function() {
     $('.bids').html(purchases);
     gameWon= false;
     gameOver= false;
+    // create a randomize value for each rock, and assign it to the rock
     mineral1 = 1 + Math.floor(Math.random() * 12);
     $( "#rock1" ).val(mineral1)
     mineral2 = 1 + Math.floor(Math.random() * 12);
@@ -26,43 +27,36 @@ $(document).ready(function() {
     $( "#rock3" ).val(mineral3)
     mineral4 = 1 + Math.floor(Math.random() * 12);
     $( "#rock4" ).val(mineral4)
+    // show me the allowance
     $('.value').html(allowance);
-    $('.wins_t').html(wins);
-    $('.losses_t').html(losses);
 }
 initializeGame()
 
 // add to the purchases for every click on images
-    $(".rock_image").on("click", function() {
-        if (gameWon === false && gameOver === false) {
-            purchases = parseInt(purchases) + parseInt($(this).val());
-            $('.bids').html(purchases);
-            if (purchases === allowance) {
-                gameWon=true;
-                // wins++;
-                // return wins;
-                // console.log("wins: " + wins)
-            }
-            else if(purchases > allowance) {
-                gameOver = true;
-                // losses++;
-                // return losses;
-                // console.log("losses: " + losses)
-            }
-        }
+$(".rock_image").on("click", function() {
+    if (gameWon === false && gameOver === false) {
+        purchases = parseInt(purchases) + parseInt($(this).val());
+        $('.bids').html(purchases);
         if (purchases === allowance) {
-            initializeGame();
-            $('#result').html('You successfully bid on the minerals!');
+            gameWon=true;
             wins++;
-                return wins;
-                console.log("wins: " + wins)
+            $('.result').html('Yeah! You successfully bid on the minerals!');
+            $('#wins_t').html(wins);
+            console.log("wins: " + wins)
+        }
+        else if(purchases > allowance) {
+            gameOver = true;
+            losses++;
+            $('.result').html('Oh no! You spent too much money on those darn rocks...');
+            $('#losses_t').html(losses);
+            console.log("losses (in else if): " + losses)
+        }
+    }
+    if (purchases === allowance) {
+            initializeGame();
         }
         else if (purchases > allowance) {
             initializeGame();
-            losses++;
-            return losses;
-            console.log("losses: " + losses)
-            $('#result').html('You spent too much money on those darn rocks :( ');
         }
         });
   

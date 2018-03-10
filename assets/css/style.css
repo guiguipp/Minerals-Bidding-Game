@@ -25,12 +25,12 @@ h3 {
     font-size: 15px;
     color: black;
     background-color: #fafafa;
-    height: 100px;
+    height: 200px;
     width: 200px;
     border-style: solid;
     border-width: 1px;
     margin: 15px;
-    padding: 2px 0px 2px 3px;
+    padding: 3px 3px 3px 3px;
 }
 /* rocks */
 .jewel_box {
