@@ -10,7 +10,36 @@ $(document).ready(function() {
     var wins=0;
     var losses=0;
     
-    
+    $("#quote1").hide();
+    $("#rock1").click(function(){
+         $("#quote1").show();
+         $("#quote2").hide();
+         $("#quote3").hide();
+         $("#quote4").hide();
+    });
+    $("#quote2").hide();
+    $("#rock2").click(function(){
+        $("#quote1").hide();
+        $("#quote2").show();
+        $("#quote3").hide();
+        $("#quote4").hide();
+    });
+    $("#quote3").hide();
+    $("#rock3").click(function(){
+        $("#quote1").hide();
+        $("#quote2").hide();
+        $("#quote3").show();
+        $("#quote4").hide();
+    });
+    $("#quote4").hide();
+    $("#rock4").click(function(){
+        $("#quote1").hide();
+        $("#quote2").hide();
+        $("#quote3").hide();
+        $("#quote4").show();
+    });
+ 
+
     function initializeGame(){
     // allowance: generates random value, assigns it to variable, displays in html file
     allowance = 19 + Math.floor(Math.random() * 120);
@@ -58,7 +87,12 @@ $(".rock_image").on("click", function() {
         else if (purchases > allowance) {
             initializeGame();
         }
+
         });
-  
+
+
+    
+    
+      
 
 });
