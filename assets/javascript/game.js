@@ -66,7 +66,22 @@ $(".rock_image").on("click", function() {
     if (gameWon === false && gameOver === false) {
         purchases = parseInt(purchases) + parseInt($(this).val());
         $('.bids').html(purchases);
-        if (purchases === allowance) {
+        if (allowance - purchases > 12) {
+            $(".bids").css({
+                "color": "003300",
+        });
+        }
+        else if (allowance - purchases <= 12 && allowance - purchases > 5) {
+            $(".bids").css({
+                "color": "#ff6f00",
+        });
+        }
+        else if (allowance - purchases <= 5){
+            $(".bids").css({
+                "color": "#c43e00",
+        });
+        }
+        else if (purchases === allowance) {
             gameWon=true;
             wins++;
             $('.result').html('Yeah! You successfully bid on the minerals!');
@@ -89,8 +104,19 @@ $(".rock_image").on("click", function() {
         }
 
         });
-
-
+        // $(".rock_image").on("click", function(){
+        //     var color = $(".bids").css("color");
+        //     if (allowance - purchases <= 12) {
+        //         $(".bids").css({
+        //             "color": "#ff6f00",
+        //     });
+        //     }
+        //     else if (allowance - purchases <= 5){
+        //         $(".bids").css({
+        //             "color": "#c43e00",
+        //     });
+        //     }
+        //     });
     
     
       
