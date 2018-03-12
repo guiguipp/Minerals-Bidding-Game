@@ -58,6 +58,7 @@ $(document).ready(function() {
     $( "#rock4" ).val(mineral4)
     // show me the allowance
     $('.value').html(allowance);
+    $(".bids").css({"color": "#003300",});
 }
 initializeGame()
 
@@ -66,34 +67,29 @@ $(".rock_image").on("click", function() {
     if (gameWon === false && gameOver === false) {
         purchases = parseInt(purchases) + parseInt($(this).val());
         $('.bids').html(purchases);
-        if (allowance - purchases > 12) {
-            $(".bids").css({
-                "color": "003300",
-        });
-        }
-        else if (allowance - purchases <= 12 && allowance - purchases > 5) {
-            $(".bids").css({
-                "color": "#ff6f00",
-        });
-        }
-        else if (allowance - purchases <= 5){
-            $(".bids").css({
-                "color": "#c43e00",
-        });
-        }
-        else if (purchases === allowance) {
+                if (allowance - purchases < 13 && allowance - purchases > 5) {
+                    $(".bids").css({
+                        "color": "#ff6f00",
+                });
+                }
+                else if (allowance - purchases < 5){
+                    $(".bids").css({
+                        "color": "#c43e00",
+                });
+                }
+        if (purchases === allowance) {
             gameWon=true;
             wins++;
             $('.result').html('Yeah! You successfully bid on the minerals!');
             $('#wins_t').html(wins);
-            console.log("wins: " + wins)
+            // console.log("wins: " + wins)
         }
         else if(purchases > allowance) {
             gameOver = true;
             losses++;
             $('.result').html('Oh no! You spent too much money on those darn rocks...');
             $('#losses_t').html(losses);
-            console.log("losses (in else if): " + losses)
+            // console.log("losses (in else if): " + losses)
         }
     }
     if (purchases === allowance) {
@@ -104,21 +100,4 @@ $(".rock_image").on("click", function() {
         }
 
         });
-        // $(".rock_image").on("click", function(){
-        //     var color = $(".bids").css("color");
-        //     if (allowance - purchases <= 12) {
-        //         $(".bids").css({
-        //             "color": "#ff6f00",
-        //     });
-        //     }
-        //     else if (allowance - purchases <= 5){
-        //         $(".bids").css({
-        //             "color": "#c43e00",
-        //     });
-        //     }
-        //     });
-    
-    
-      
-
 });
