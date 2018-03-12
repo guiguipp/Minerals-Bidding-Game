@@ -8,30 +8,56 @@ h3 {
     text-align: center;
     padding: 25px;
 }
-/* money boxes */
-.allowance, .purchases {
-    font-size: 100px;
+ul {
+    padding: 40px;
+    color: black;
+
+}
+ul > li::before {
+    content: "-";
+    margin-left: -15px;
+}
+ul > p {
     color: black;
     text-align: center;
-    background-color: #fafafa;
+}
+.hank
+{
+    font-style: italic;
+}
+/* all boxes */
+.allowance, .purchases, .dialogs, .tally {
+    background-color: #fff9c4;
+    border-style: solid;
+    border-color:#003300;
+    border-width: 3px;
+    border-color: black;    
+}
+.allowance, .purchases, .tally {
+    color: #003300;
+    text-align: center;
+    margin: 15px;
+}
+.allowance, .purchases {
+    font-size: 100px;
     height: 200px;
     width: 300px;
-    border-style: solid;
-    border-width: 3px;
     border-radius: 20px;
-    margin: 15px;
     padding-top: 20px;
 }
-/* game box */
+.dialogs {
+    height: 300px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: scroll;
+}
 .tally {
     font-size: 15px;
-    color: black;
-    background-color: #fafafa;
+    background-color: #fffff7;
     height: 200px;
     width: 200px;
     border-style: solid;
     border-width: 1px;
-    margin: 15px;
     padding: 3px 3px 3px 3px;
 }
 /* rocks */
