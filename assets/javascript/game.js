@@ -56,6 +56,7 @@ $(document).ready(function() {
     $( "#rock3" ).val(mineral3)
     mineral4 = 1 + Math.floor(Math.random() * 12);
     $( "#rock4" ).val(mineral4)
+    checkOdd()
     // show me the allowance
     $('.value').html(allowance);
     $(".bids").css({"color": "#003300",});
@@ -100,4 +101,11 @@ $(".rock_image").on("click", function() {
         }
 
         });
+        
+function checkOdd() {
+    if (mineral1%2 === 0 && mineral2%2 === 0 && mineral3%2 === 0 && mineral4%2 === 0) {
+        mineral4 = mineral4 - 1;
+    }
+}
+
 });
